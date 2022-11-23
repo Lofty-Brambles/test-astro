@@ -1,4 +1,5 @@
-import { Node, toc } from "mdast-util-toc/lib";
+import { toc } from "mdast-util-toc";
+import type { Node } from "mdast-util-toc/lib";
 
 /* Credits :- https://github.com/remarkjs/remark-toc */
 /* This is simply to add some personal customisations */
