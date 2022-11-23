@@ -1,0 +1,52 @@
+{
+	"name": "@example/basics",
+	"type": "module",
+	"version": "0.0.1",
+	"private": true,
+	"scripts": {
+		"preinstall": "npx only-allow pnpm",
+		"dev": "astro dev",
+		"start": "astro dev",
+		"build": "astro build",
+		"preview": "astro preview",
+		"astro": "astro",
+		"commit": "cty",
+		"lint:staged": "lint-staged",
+		"prepare": "husky install"
+	},
+	"dependencies": {
+		"@astrojs/mdx": "^0.11.6",
+		"@astrojs/prefetch": "^0.1.1",
+		"@astrojs/sitemap": "^1.0.0",
+		"@astrojs/preact": "^1.2.0",
+		"astro": "^1.6.10",
+		"astro-compress": "^1.1.9",
+		"astro-seo": "^0.6.0",
+		"dotenv": "^16.0.3",
+		"mdast-util-to-string": "^3.1.0",
+		"mdast-util-toc": "^6.1.0",
+		"preact": "^10.6.5",
+		"reading-time": "^1.5.0",
+		"rehype-accessible-emojis": "^0.3.2",
+		"unist-util-visit": "^4.1.1"
+	},
+	"devDependencies": {
+		"astro-robots-txt": "^0.3.10",
+		"cty": "^1.0.3",
+		"eslint": "^8.28.0",
+		"eslint-plugin-mdx": "^2.0.5",
+		"husky": "^8.0.0",
+		"lint-staged": "^13.0.3",
+		"prettier": "^2.7.1",
+		"prettier-plugin-astro": "^0.5.5",
+		"sass": "^1.56.1"
+	},
+	"lint-staged": {
+		"src/**/*.{astro,tsx}": [
+			"prettier -w --plugin-search-dir=. ."
+		],
+		"src/**/*.{ts,sass,mdx}": [
+			"prettier -w"
+		]
+	}
+}
