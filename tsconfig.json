@@ -1,3 +1,25 @@
 {
-  "extends": "astro/tsconfigs/strictest"
+    "extends": "astro/tsconfigs/strictest",
+    "compilerOptions": {
+        "moduleResolution": "Node",
+        "module": "ESNext",
+        "lib": ["DOM", "ESNext"],
+        "target": "ESNext",
+
+        "forceConsistentCasingInFileNames": true,
+        "isolatedModules": true,
+        "importsNotUsedAsValues": "error",
+        "jsx": "react-jsx",
+        "jsxImportSource": "preact",
+
+        "baseUrl": ".",
+        "paths": {
+            "$components/*": ["src/components/*"],
+            "$config": ["src/config"],
+            "$layouts/*": ["src/layouts/*"],
+            "$pages/*": ["src/pages/*"],
+            "$lib/*": ["src/lib/*"]
+        }
+    },
+    "include": ["**/*.astro", "**/*.ts", "**/*.tsx"]
 }
